@@ -6,23 +6,22 @@
               -b 0
               /rosout
               /rosout_agg
-              /camera1/depth/image
-              /camera1/rgb/image_rect_color
-              /camera2/depth/image
-              /camera2/rgb/image_rect_color
+              /rtabmap/global_path
+              /rtabmap/grid_map
+              /rtabmap/info
+              /rtabmap/mapData
+              /tf
+              /tf_static
+              /voxel_cloud
               /rtabmap/cloud_ground
               /rtabmap/cloud_map
               /rtabmap/cloud_obstacles
-              /rtabmap/global_path
               /rtabmap/goal
               /rtabmap/goal_node
               /rtabmap/goal_out
               /rtabmap/goal_reached
-              /rtabmap/grid_map
-              /rtabmap/info
               /rtabmap/labels
               /rtabmap/local_path
-              /rtabmap/mapData
               /rtabmap/mapGraph
               /rtabmap/move_base/cancel
               /rtabmap/move_base/feedback
@@ -41,10 +40,12 @@
               /rtabmap/odom_local_scan_map
               /rtabmap/proj_map
               /rtabmap/scan_map
-              /tf
-              /tf_static
-              /voxel_cloud
               "
         output="screen">
   </node>
 </launch>
+
+              <!-- /camera1/depth/image -->
+              <!-- /camera1/rgb/image_rect_color -->
+              <!-- /camera2/depth/image -->
+              <!-- /camera2/rgb/image_rect_color -->
