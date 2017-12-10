@@ -1,0 +1,35 @@
+<launch>
+  <!-- choose between RGB-D and stereo -->
+  <arg name="stereo" default="false" />
+  <!-- choose tf between zed and rtabmap -->
+  <arg name="publish_tf" default="true" />
+
+  <!-- stereo odometry -->
+  <group if="$(arg stereo)">
+    <group ns="stereo_camera">
+      <include file="$(find zed_wrapper)/launch/zed_camera.launch">
+        <arg name="publish_tf" value="$(arg publish_tf)" />
+      </include>
+    </group>
+    <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
+      <arg name="stereo" value="true" />
+      <arg name="right_image_topic" value="/stereo_camera/right/image_rect_color" />
+      <arg name="frame_id" value="zed_center" />
+    </include>
+  </group>
+
+  <!-- RGB-D odometry -->
+  <group unless="$(arg stereo)">
+    <group ns="camera">
+      <include file="$(find zed_wrapper)/launch/zed_camera.launch">
+        <arg name="publish_tf" value="$(arg publish_tf)" />
+      </include>
+    </group>
+    <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
+      <arg name="right_image_topic" value="/camera/right/image_rect_color" />
+      <arg name="frame_id" value="zed_center" />
+      <arg name="depth_topic" value="/camera/depth/depth_registered" />
+    </include>
+  </group>
+
+</launch>
