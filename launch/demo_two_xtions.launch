@@ -1,7 +1,7 @@
 
 <launch>
    
-  <!-- Multi-cameras demo with 2 Kinects -->
+  <!-- Multi-cameras demo with 2 Xtions -->
    
   <!-- Cameras -->
   <include file="$(find openni2_launch)/launch/openni2.launch">
@@ -18,8 +18,14 @@
   <!-- Frames: Kinects are placed at 90 degrees, clockwise -->
   <node pkg="tf" type="static_transform_publisher" name="base_to_camera1_tf"
       args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /camera1_link 100" />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="base_to_camera2_tf" -->
+  <!--       args="-0.09 -0.09 0.0 -1.5707963267948966 0.0 0.0 /base_link /camera2_link 100" /> -->
   <node pkg="tf" type="static_transform_publisher" name="base_to_camera2_tf"
-      args="-0.0955 0.0 0.0 3.141592653589793 0.0 0.0 /base_link /camera2_link 100" />
+        args="-0.0955 0.0 0.0 3.141592653589793 0.0 0.0 /base_link /camera2_link 100" />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="base_to_camera2_tf" -->
+  <!--       args="-0.1113 -0.1326 0.0 -0.698 0.0 0.0 /base_link /camera2_link 100" /> -->
+        <!-- args="-0.1113 0.1326 0.0 0.698 0.0 0.0 /base_link /camera2_link 100" /> -->
+
    
    <!-- Choose visualization -->
    <arg name="rviz"       default="false" />
