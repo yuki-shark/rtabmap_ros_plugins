@@ -8,8 +8,8 @@ project(rtabmap_ros_plugins)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  openni2_launch
-  rtabmap_ros
+  # openni2_launch
+  # rtabmap_ros
 )
 
 ## System dependencies are found with CMake's conventions

@@ -49,10 +49,10 @@
   <!-- Use doc_depend for packages you need only for building documentation: -->
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>openni2_launch</build_depend>
-  <build_depend>rtabmap_ros</build_depend>
-  <build_export_depend>openni2_launch</build_export_depend>
-  <build_export_depend>rtabmap_ros</build_export_depend>
+  <!-- <build_depend>openni2_launch</build_depend> -->
+  <!-- <build_depend>rtabmap_ros</build_depend> -->
+  <!-- <build_export_depend>openni2_launch</build_export_depend> -->
+  <!-- <build_export_depend>rtabmap_ros</build_export_depend> -->
   <exec_depend>openni2_launch</exec_depend>
   <exec_depend>rtabmap_ros</exec_depend>
 
